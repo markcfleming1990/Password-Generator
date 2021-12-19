@@ -140,6 +140,18 @@ if (openQuestion.hasLowerCase) {
   allChars = allChars.concat(LOWERCASEARRY);
   console.log("uppercase +lowercase", allChars);
   }
+
+  if (openQuestion.hasNumericValue) {
+    allChars = allChars.concat(NUMERICVALUEARRY);
+    console.log("uppercase +lowercase + numeric", allChars);
+    }
+
+    if (openQuestion.hasSpecialChar) {
+      allChars = allChars.concat(SPECIALCHARARRY);
+      console.log("uppercase +lowercase + numeric + special", allChars);
+      }
+    
+
 //console.log("What is my password option", openQuestion);
  for (var i =0; i < openQuestion.passLength; i++) {
    var getCharacter = getRandom(allChars);
@@ -153,7 +165,7 @@ return passwordResults.join("");
 }
 function getRandom (array) {
   //console.log("array length", array.length);
-  var index =Math.floor(Math.random () * array.length);
+  var index = Math.floor(Math.random () * array.length);
   return array[index];
 }
 
